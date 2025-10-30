@@ -15,8 +15,16 @@
       <h1>Kristoffer Hygum</h1>
       <p>Digital designer and maker. Focused on interaction design and prototyping.</p>
       <p>
-        I explore how technology can enable new forms of interaction, play, and shared experience
-        through thoughtful design and prototyping.
+        I’m Kristoffer Hygum, a digital designer and maker currently pursuing a master’s degree in Digital Transformation at Roskilde University.
+      </p>
+      <p>
+        My work explores how technology, design, and rapid prototyping can create new forms of interaction and experience.
+      </p>
+      <p>
+        I have a hands-on approach to design, often working with laser cutting, 3D printing, and fabrication tools to prototype and test ideas quickly.
+      </p>
+      <p>
+        Alongside my studies, I work as a technological supervisor at FABLAB RUC and as a teaching assistant, helping others bring creative and technical projects to life.
       </p>
 
       <div class="contact-links">
@@ -83,6 +91,27 @@
   projects.forEach(el => observer.observe(el));
 </script>
 
+
+
+<!--  Page transition script -->
+<script>
+  // Fade in when the page loads
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // Fade out before navigating away
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("http")) {
+        e.preventDefault();
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location = href, 300);
+      }
+    });
+  });
+</script>
 
 
 </body>

@@ -60,5 +60,26 @@
     }, { threshold: 0.2 });
     projects.forEach(el => observer.observe(el));
   </script>
+
+
+  <!--  Page transition script -->
+<script>
+  // Fade in when the page loads
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // Fade out before navigating away
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("http")) {
+        e.preventDefault();
+        document.body.classList.remove("loaded");
+        setTimeout(() => window.location = href, 300);
+      }
+    });
+  });
+</script>
 </body>
 </html>
