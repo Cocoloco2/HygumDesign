@@ -52,10 +52,28 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* === Projects === */
+/* === Section Intro Text === */
+.section-intro {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #444;
+  margin: -0.5rem auto 2rem;
+  line-height: 1.6;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* === Projects Grid === */
 .projects {
   display: grid;
   gap: 1.8rem;
+}
+
+/* Two-column layout on larger screens */
+@media (min-width: 700px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .project {
@@ -64,6 +82,8 @@ h2 {
   border-radius: 10px;
   transition: all 0.2s ease;
   background-color: #fff;
+  overflow: hidden;
+  text-align: center;
 }
 
 .project:hover {
@@ -84,30 +104,11 @@ h2 {
   line-height: 1.6;
 }
 
-.section-intro {
- font-size: 1.2rem;
-  font-weight: 500;
-  color: #666;
-  margin-top: 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-  max-width: 1500px;
-  text-align: center;         /* optional, looks balanced */
-}
-
-
-
-
-
-/* === Project Image Styling (with hover zoom) === */
+/* === Project Image (with hover zoom) === */
 .project-image {
   display: block;
-  width: 300px;          /* fixed size */
-  max-width: 100%;       /* keeps it responsive on small screens */
+  width: 300px;
+  max-width: 100%;
   height: auto;
   margin: 1rem auto;
   border-radius: 10px;
@@ -119,14 +120,9 @@ h2 {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* keeps zoom inside project card */
-.project {
-  overflow: hidden;
-  text-align: center; /* centers image + button */
-}
-
-/* === Project Button Styling === */
-.project-button {
+/* === Buttons (used for projects + contact) === */
+.project-button,
+.contact a {
   display: inline-block;
   background-color: #111;
   color: #fff;
@@ -138,27 +134,14 @@ h2 {
   transition: background-color 0.2s ease;
 }
 
-.project-button:hover {
-  background-color: #0077ff;
-}
-
-
-/* === Contact Buttons === */
-.contact a {
-  text-align: center;
-  margin-top: 3rem;
-  display: inline-block;
-  background-color: #111;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  margin: 0.4rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
+.project-button:hover,
 .contact a:hover {
   background-color: #0077ff;
   color: #fff;
+}
+
+/* === Contact Section === */
+.contact {
+  text-align: center;
+  margin-top: 3rem;
 }
