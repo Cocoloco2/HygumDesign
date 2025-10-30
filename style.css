@@ -1,20 +1,20 @@
 .project-image {
-  display: block;          /* makes it appear on its own line */
-  width: 25%;              /* keeps it small */
-  height: auto;            /* keeps proportions */
-  margin: 1rem auto;      /* centers it horizontally */
+  display: block;          /* keeps image on its own line */
+  width: 25%;              /* small, neat image size */
+  height: auto;
+  margin: 1rem auto;       /* centers it horizontally */
   border-radius: 10px;
 }
 
-
 .project-button {
   display: inline-block;
-  margin-top: 0.5rem;
   background-color: #111;
   color: #fff;
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
+  margin-top: 0.5rem;
+  font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
@@ -22,6 +22,7 @@
   background-color: #0077ff;
 }
 
+/* Center the button below the image */
 .project div {
-  text-align: center; /* centers the button horizontally */
+  text-align: center;
 }
