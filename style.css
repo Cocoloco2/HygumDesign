@@ -1,7 +1,7 @@
 .project-button {
-  display: inline-block;
+  display: block;       /* makes the button take its own line */
+  margin-top: 0.5rem;   /* adds space above the button */
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
   background-color: #111;
   color: #fff;
   text-decoration: none;
