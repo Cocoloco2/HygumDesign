@@ -48,15 +48,24 @@ h2 {
 
 
 
-  
+
+/* === Project Image Styling === */
 .project-image {
   display: block;
-  max-width: 300px;   /* sets the maximum width in pixels */
-  width: 100%;        /* makes it shrink if the screen is smaller */
+  max-width: 300px;
+  width: 100%;
   height: auto;
   margin: 1rem auto;
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* === Hover Zoom Effect === */
+.project-image:hover {
+  transform: scale(1.05); /* zooms the image slightly */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* adds a soft shadow */
+}
+
 
 
 
