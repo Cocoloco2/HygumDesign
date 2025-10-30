@@ -95,7 +95,8 @@ h2 {
   margin-bottom: 1rem;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.5rem;
-  max-width: 600px;
+  max-width: none;
+  text-align: center;         /* optional, looks balanced */
 }
 
 
