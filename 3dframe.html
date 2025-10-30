@@ -25,5 +25,22 @@
   <footer>
     <p>© 2025 Kristoffer Hygum</p>
   </footer>
+
+  <script>
+  const projects = document.querySelectorAll('.project');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${index * 150}ms`;
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.style.transitionDelay = '0ms';
+      }
+    });
+  }, { threshold: 0.2 });
+  projects.forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
