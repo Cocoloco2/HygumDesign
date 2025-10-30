@@ -55,40 +55,58 @@
     </main>
   </div>
 
-  <script>
-    const projects = document.querySelectorAll('.project');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          entry.target.style.transitionDelay = `${index * 150}ms`;
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-          entry.target.style.transitionDelay = '0ms';
-        }
-      });
-    }, { threshold: 0.2 });
-    projects.forEach(el => observer.observe(el));
-  </script>
-
-  <!--  Page transition script -->
+  <!-- Project fade-in animation + page transition -->
 <script>
+  // === Staggered fade-in for projects ===
+  const projects = document.querySelectorAll('.project');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add a slight delay for each project
+        entry.target.style.transitionDelay = `${index * 150}ms`;
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+        entry.target.style.transitionDelay = '0ms';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  projects.forEach(el => observer.observe(el));
+
+
+  // === Smooth page transitions ===
+
+  // Handle browser back/forward navigation (fix for white screen)
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      document.body.classList.add('loaded');
+    }
+  });
+
   // Fade in when the page loads
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
   });
 
   // Fade out before navigating away
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", e => {
-      const href = link.getAttribute("href");
-      if (href && !href.startsWith("#") && !href.startsWith("http")) {
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+      if (
+        href &&
+        !href.startsWith('#') &&
+        !href.startsWith('mailto:') &&
+        !href.startsWith('http')
+      ) {
         e.preventDefault();
-        document.body.classList.remove("loaded");
-        setTimeout(() => window.location = href, 300);
+        document.body.classList.remove('loaded');
+        setTimeout(() => (window.location = href), 300);
       }
     });
   });
 </script>
+
 </body>
 </html>

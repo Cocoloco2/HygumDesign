@@ -75,7 +75,9 @@
     </main>
   </div>
 
- <script>
+ <!-- Project fade-in animation + page transition -->
+<script>
+  // === Staggered fade-in for projects ===
   const projects = document.querySelectorAll('.project');
 
   const observer = new IntersectionObserver((entries) => {
@@ -92,29 +94,40 @@
   }, { threshold: 0.2 });
 
   projects.forEach(el => observer.observe(el));
-</script>
 
 
+  // === Smooth page transitions ===
 
-<!--  Page transition script -->
-<script>
+  // Handle browser back/forward navigation (fix for white screen)
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      document.body.classList.add('loaded');
+    }
+  });
+
   // Fade in when the page loads
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
   });
 
   // Fade out before navigating away
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", e => {
-      const href = link.getAttribute("href");
-      if (href && !href.startsWith("#") && !href.startsWith("http")) {
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+      if (
+        href &&
+        !href.startsWith('#') &&
+        !href.startsWith('mailto:') &&
+        !href.startsWith('http')
+      ) {
         e.preventDefault();
-        document.body.classList.remove("loaded");
-        setTimeout(() => window.location = href, 300);
+        document.body.classList.remove('loaded');
+        setTimeout(() => (window.location = href), 300);
       }
     });
   });
 </script>
+
 
 
 </body>
