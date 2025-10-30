@@ -54,13 +54,14 @@ h2 {
 
 /* === Section Intro Text === */
 .section-intro {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #444;
   margin: -0.5rem auto 2rem;
   line-height: 1.6;
   max-width: 720px;
   text-align: center;
+
 }
 
 /* === Projects Grid === */
