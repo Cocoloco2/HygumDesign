@@ -8,138 +8,6 @@ body {
   font-weight: 400;
 }
 
-/* === Header === */
-header {
-  padding: 4rem 1.5rem 2rem;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-header h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #666;
-  margin-top: 0;
-}
-
-header p {
-  font-size: 1rem;
-  color: #444;
-  max-width: 600px;
-  margin: 0.5rem auto 0;
-  line-height: 1.6;
-}
-
-/* === Sections === */
-section {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-}
-
-/* === Section Intro Text === */
-.section-intro {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #444;
-  margin: -0.5rem auto 2rem;
-  line-height: 1.6;
-  max-width: 3000px;
-  text-align: center;
-
-}
-
-/* === Projects Grid === */
-.projects {
-  display: grid;
-  gap: 1.8rem;
-}
-
-.project {
-  padding: 1.5rem 1.8rem;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
-}
-
-.project:hover {
-  background-color: #fafafa;
-  transform: translateY(-3px);
-}
-
-.project h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.project p {
-  margin: 0;
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* === Project Image (with hover zoom) === */
-.project-image {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* === Buttons (used for projects + contact) === */
-.project-button,
-.contact a {
-  display: inline-block;
-  background-color: #111;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  margin-top: 0.8rem;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
-.project-button:hover,
-.contact a:hover {
-  background-color: #0077ff;
-  color: #fff;
-}
-
-/* === Contact Section === */
-.contact {
-  text-align: center;
-  margin-top: 3rem;
-}
-
 /* === Two-column Layout === */
 .container {
   display: flex;
@@ -149,7 +17,7 @@ h2 {
   gap: 3rem;
 }
 
-/* === Sidebar (left column) === */
+/* === Sidebar (fixed about section) === */
 .sidebar {
   position: sticky;
   top: 2rem;
@@ -157,6 +25,8 @@ h2 {
   max-width: 280px;
   height: fit-content;
   align-self: flex-start;
+  border-right: 1px solid #eee;
+  padding-right: 2rem;
 }
 
 .sidebar h1 {
@@ -192,12 +62,99 @@ h2 {
   background-color: #0077ff;
 }
 
-/* === Main Content (right column) === */
+/* === Main Content (projects + footer) === */
 .content {
   flex: 3;
 }
 
-/* === Responsive adjustment for mobile === */
+/* === Projects === */
+.projects {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.project {
+  padding: 1.5rem 1.8rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project:hover {
+  background-color: #fafafa;
+  transform: translateY(-3px);
+}
+
+.project h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.project p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* === Project Images === */
+.project-image {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* === Buttons (projects + contact) === */
+.project-button,
+.contact a {
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.project-button:hover,
+.contact a:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+/* === Section Intro Text === */
+.section-intro {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111;
+  margin: -0.5rem auto 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #777;
+}
+
+/* === Responsive Layout === */
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
@@ -208,16 +165,11 @@ h2 {
     position: static;
     max-width: 100%;
     text-align: center;
+    border-right: none;
+    padding-right: 0;
   }
 
   .contact-links a {
     margin: 0.3rem;
   }
 }
-
-.sidebar {
-  border-right: 1px solid #eee;
-  padding-right: 2rem;
-}
-
-
