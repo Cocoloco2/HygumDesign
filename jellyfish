@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristoffer Hygum — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jellyfish on Roskilde Festival — Kristoffer Hygum</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
-    <h1>Kristoffer Hygum</h1>
-    <h2>Hygum Design</h2>
-    <p>Digital designer and maker focused on interaction design and prototyping</p>
+    <h1>Jellyfish on Roskilde Festival</h1>
+    <p>An interactive light installation reacting to human touch and proximity.</p>
   </header>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <a href="mailto:Kristofferhn@hotmail.com" class="project-button">Kristofferhn@hotmail.com</a>
-    <a href="https://instagram.com/Cocoloco2" target="_blank" class="project-button">@Cocoloco2</a>
+  <section>
+    <img src="images/JellyFish.png" alt="Jellyfish Installation" class="project-image">
+    <p>This page could include more photos, videos, or a short write-up about your installation process and concept.</p>
+    <a href="index.html" class="project-button">← Back to Portfolio</a>
   </section>
 
   <footer>
