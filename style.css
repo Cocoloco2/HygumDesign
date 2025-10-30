@@ -69,13 +69,6 @@ h2 {
   gap: 1.8rem;
 }
 
-/* Two-column layout on larger screens */
-@media (min-width: 700px) {
-  .projects {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .project {
   padding: 1.5rem 1.8rem;
   border: 1px solid #eee;
