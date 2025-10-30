@@ -1,10 +1,11 @@
 .project-image {
-  display: block;          /* keeps image on its own line */
-  width: 25%;              /* small, neat image size */
-  height: auto;
-  margin: 1rem auto;       /* centers it horizontally */
-  border-radius: 10px;
+  display: block !important;      /* force it to act as a block */
+  width: 25% !important;          /* keep it small */
+  height: auto !important;
+  margin: 1rem auto !important;   /* center it */
+  border-radius: 10px !important;
 }
+
 
 .project-button {
   display: inline-block;
