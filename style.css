@@ -125,3 +125,24 @@ h2 {
 .project-button:hover {
   background-color: #0077ff;
 }
+
+
+/* === Contact Buttons === */
+.contact a {
+  text-align: center;
+  margin-top: 3rem;
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.contact a:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
