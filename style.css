@@ -1,10 +1,12 @@
 .project-image {
-  display: block !important;      /* force it to act as a block */
-  width: 25% !important;          /* keep it small */
-  height: auto !important;
-  margin: 1rem auto !important;   /* center it */
-  border-radius: 10px !important;
+  display: block;
+  max-width: 300px;   /* sets the maximum width in pixels */
+  width: 100%;        /* makes it shrink if the screen is smaller */
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 10px;
 }
+
 
 
 .project-button {
