@@ -9,16 +9,19 @@
 
 .project-button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
   margin-top: 0.5rem;
   background-color: #111;
   color: #fff;
   text-decoration: none;
+  padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .project-button:hover {
   background-color: #0077ff;
+}
+
+.project div {
+  text-align: center; /* centers the button horizontally */
 }
