@@ -2,7 +2,7 @@
   display: block;          /* makes it appear on its own line */
   width: 25%;              /* keeps it small */
   height: auto;            /* keeps proportions */
-  margin: 1rem 0;          /* adds space above and below */
+  margin: 1rem auto;      /* centers it horizontally */
   border-radius: 10px;
 }
 
