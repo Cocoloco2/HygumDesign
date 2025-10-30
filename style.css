@@ -173,3 +173,17 @@ footer {
     margin: 0.3rem;
   }
 }
+
+
+
+/* === Fade-in on scroll animation === */
+.project {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

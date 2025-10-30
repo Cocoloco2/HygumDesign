@@ -13,7 +13,7 @@
     <!-- === LEFT COLUMN: About Sidebar === -->
     <aside class="sidebar">
       <h1>Kristoffer Hygum</h1>
-      <p>Digital designer and maker focused on interaction design and prototyping.</p>
+      <p>Digital designer and maker. Focused on interaction design and prototyping.</p>
       <p>
         I explore how technology can enable new forms of interaction, play, and shared experience
         through thoughtful design and prototyping.
@@ -63,5 +63,18 @@
       </footer>
     </main>
   </div>
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.project').forEach((el) => observer.observe(el));
+</script>
+
 </body>
 </html>
