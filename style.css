@@ -1,15 +1,24 @@
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 10px;
+  object-fit: cover; /* ensures it fills the box nicely */
+}
+
 .project-button {
-  display: block;       /* makes the button take its own line */
-  margin-top: 0.5rem;   /* adds space above the button */
-  padding: 0.5rem 1rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
   background-color: #111;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .project-button:hover {
   background-color: #0077ff;
 }
-
