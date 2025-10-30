@@ -7,40 +7,56 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Parametric Shelf System</h1>
-    <p>An adaptive shelving concept exploring modular design principles and digital fabrication.</p>
-  </header>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>Kristoffer Hygum</h1>
+      <p>Digital designer and maker focused on interaction design and prototyping.</p>
+      <p>
+        I explore how technology can enable new forms of interaction, play, and shared experience
+        through thoughtful design and prototyping.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:Kristofferhn@hotmail.com">Email</a>
+        <a href="https://instagram.com/Cocoloco98" target="_blank">Instagram</a>
+      </div>
+    </aside>
 
-  <section>
-    <img src="images/ParametricShelf.png" alt="Parametric Shelf System" class="project-image">
-    <p>
-      This project explores how parametric design can enable adaptable and personalized furniture systems. 
-      Through digital fabrication and algorithmic design, the shelf’s structure can be adjusted based on 
-      spatial constraints, user needs, and aesthetic preferences.  
-    </p>
-    <a href="index.html" class="project-button">← Back to Portfolio</a>
-  </section>
+    <!-- Main Content -->
+    <main class="content">
+      <section>
+        <h2>Parametric Shelf System</h2>
+        <p>An adaptive shelving concept exploring modular design principles and digital fabrication.</p>
+        <img src="images/ParametricShelf.png" alt="Parametric Shelf System" class="project-image">
+        <p>
+          The Parametric Shelf System explores how algorithmic and parametric design can support 
+          adaptable and customizable furniture. Using digital fabrication tools, the shelf’s structure 
+          can be modified to fit different spaces and user needs — merging craftsmanship with generative design.
+        </p>
 
-  <footer>
-    <p>© 2025 Kristoffer Hygum</p>
-  </footer>
+        <a href="index.html" class="project-button">← Back to Portfolio</a>
+      </section>
+
+      <footer>
+        <p>© 2025 Kristoffer Hygum</p>
+      </footer>
+    </main>
+  </div>
 
   <script>
-  const projects = document.querySelectorAll('.project');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.style.transitionDelay = `${index * 150}ms`;
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-        entry.target.style.transitionDelay = '0ms';
-      }
-    });
-  }, { threshold: 0.2 });
-  projects.forEach(el => observer.observe(el));
-</script>
-
+    const projects = document.querySelectorAll('.project');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${index * 150}ms`;
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+          entry.target.style.transitionDelay = '0ms';
+        }
+      });
+    }, { threshold: 0.2 });
+    projects.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
