@@ -45,30 +45,33 @@ section {
 
 h2 {
   font-size: 1.3;
+}
 
 
 
-
-/* === Project Image Styling === */
+/* === Project Image Styling (with hover zoom) === */
 .project-image {
   display: block;
-  max-width: 300px;
-  width: 100%;
+  width: 300px;          /* fixed size */
+  max-width: 100%;       /* keeps it responsive on small screens */
   height: auto;
   margin: 1rem auto;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* === Hover Zoom Effect === */
 .project-image:hover {
-  transform: scale(1.05); /* zooms the image slightly */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* adds a soft shadow */
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* keeps zoom inside project card */
+.project {
+  overflow: hidden;
+  text-align: center; /* centers image + button */
+}
 
-
-
+/* === Project Button Styling === */
 .project-button {
   display: inline-block;
   background-color: #111;
@@ -76,18 +79,11 @@ h2 {
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .project-button:hover {
   background-color: #0077ff;
-}
-
-/* Center the button below the image */
-.project div {
-  text-align: center;
-}
-
 }
